@@ -5,7 +5,7 @@
       <br/>
        <router-link :to="{ path: '/home/'+name+'/list'}">go to list</router-link>
     <br/>
-        <router-link :to="{ path: '/home/'+name+'/my'}">我的</router-link>
+        <router-link :to="{ path: '/home/'+name+'/my/'+name}">我的</router-link>
        <router-view></router-view>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     methods:{
         goback:function(){
             if(confirm("客官要走吗？")){
-                this.$router.go(-1)
+                this.$router.push("/")
             }
         }
     }
